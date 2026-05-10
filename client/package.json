@@ -1,0 +1,20 @@
+{
+  "name": "guia10-dom",
+  "version": "1.0.0",
+  "description": "Guía 10 - Introducción a la manipulación del DOM",
+  "homepage": "https://github.com/brianbayona/DOM-3315656#readme",
+  "bugs": {
+    "url": "https://github.com/brianbayona/DOM-3315656/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianbayona/DOM-3315656.git"
+  },
+  "license": "ISC",
+  "author": "Brian Bayona",
+  "type": "module",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"No hay pruebas configuradas\""
+  }
+}

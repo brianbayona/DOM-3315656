@@ -1,3 +1,8 @@
+import { isValidInput } from "./Transferencia/todo1.js";
+import { validateForm } from "./Transferencia/todo4.js";
+import { hideEmptyState } from "./Transferencia/todo7.js";
+import { handleFormSubmit } from "./Transferencia/todo10.js";
+
 /**
  * ============================================
  * EJERCICIO DE MANIPULACIÓN DEL DOM
@@ -56,11 +61,6 @@ let totalMessages = 0;
  * @param {string} value - El valor a validar
  * @returns {boolean} - true si es válido, false si no lo es
  */
-function isValidInput(value) {
-    // TODO: Implementar validación
-    // Pista: usa trim() para eliminar espacios al inicio y final
-    // Retorna true si después de trim() el string tiene longitud > 0
-}
 
 /**
  * Muestra un mensaje de error en un elemento específico
@@ -85,39 +85,6 @@ function clearError(errorElement) {
  * Valida todos los campos del formulario
  * @returns {boolean} - true si todos los campos son válidos, false si alguno no lo es
  */
-function validateForm() {
-    // TODO: Implementar validación completa del formulario
-    // 1. Obtener los valores de los inputs usando .value
-    // 2. Crear una variable para saber si el formulario es válido (inicialmente true)
-    // 3. Validar el campo de nombre de usuario
-    //    - Si no es válido, mostrar error y cambiar la variable a false
-    //    - Si es válido, limpiar el error
-    // 4. Validar el campo de mensaje
-    //    - Si no es válido, mostrar error y cambiar la variable a false
-    //    - Si es válido, limpiar el error
-    // 5. Retornar si el formulario es válido o no
-    
-    // Ejemplo de estructura:
-    /*
-    const userName = userNameInput.value;
-    const userMessage = userMessageInput.value;
-    let isValid = true;
-    
-    // Validar nombre
-    if (!isValidInput(userName)) {
-        // Mostrar error
-        // Agregar clase 'error' al input
-        isValid = false;
-    } else {
-        // Limpiar error
-        // Remover clase 'error' del input
-    }
-    
-    // Validar mensaje (estructura similar)
-    
-    return isValid;
-    */
-}
 
 /**
  * Obtiene la fecha y hora actual formateada
@@ -156,14 +123,6 @@ function updateMessageCount() {
     // TODO: Implementar actualización del contador
     // Pista: Usa template literals para crear el texto
     // Formato: "X mensaje(s)" o "X mensajes"
-}
-
-/**
- * Oculta el estado vacío (mensaje cuando no hay mensajes)
- */
-function hideEmptyState() {
-    // TODO: Implementar función para ocultar el estado vacío
-    // Pista: Agrega la clase 'hidden' al elemento emptyState
 }
 
 /**
@@ -224,28 +183,6 @@ function createMessageElement(userName, message) {
  * Maneja el evento de envío del formulario
  * @param {Event} event - Evento del formulario
  */
-function handleFormSubmit(event) {
-    // TODO: Implementar el manejador del evento submit
-    
-    // PASO 1: Prevenir el comportamiento por defecto del formulario
-    // Pista: event.preventDefault()
-    
-    // PASO 2: Validar el formulario
-    // Si no es válido, detener la ejecución (return)
-    
-    // PASO 3: Obtener los valores de los campos
-    
-    // PASO 4: Crear el nuevo elemento de mensaje
-    // Llamar a createMessageElement con los valores obtenidos
-    
-    // PASO 5: Limpiar el formulario
-    // Pista: messageForm.reset()
-    
-    // PASO 6: Limpiar los errores
-    
-    // PASO 7: Opcional - Enfocar el primer campo para facilitar agregar otro mensaje
-    // Pista: userNameInput.focus()
-}
 
 /**
  * Limpia los errores cuando el usuario empieza a escribir

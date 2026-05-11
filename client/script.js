@@ -178,16 +178,16 @@ function hideEmptyState(emptyStateElement) {
  * @param {string} message - Contenido del mensaje
  */
 function getInitials(name) { // Función para obtener las iniciales del nombre del usuario
-  const names = name.trim().split(/\s+/);
+  const names = name.trim().split(/\s+/); // Divide el nombre en palabras usando espacios como separadores
 
-  if (names.length === 1) {
-    return names[0].slice(0, 2).toUpperCase();
+  if (names.length === 1) { // Si solo hay una palabra, toma las primeras dos letras
+    return names[0].slice(0, 2).toUpperCase(); // Toma las primeras dos letras y las convierte a mayúsculas
   }
 
   return names
-    .map(word => word[0])
-    .join("")
-    .toUpperCase();
+    .map(word => word[0]) // Toma la primera letra de cada palabra
+    .join("") // Une las letras obtenidas
+    .toUpperCase(); // Convierte el resultado a mayúsculas
 }
 function createMessageElement(userName, message) {
 
@@ -341,8 +341,8 @@ messageForm.addEventListener("submit", (event) => {
  * Esta función se ejecuta cuando el DOM está completamente cargado
  */
 document.addEventListener('DOMContentLoaded', function () {
-  console.log('✅ DOM completamente cargado');
-  console.log('📝 Aplicación de registro de mensajes iniciada');
+  console.log(' DOM completamente cargado');
+  console.log(' Aplicación de registro de mensajes iniciada');
 
   // Aquí puedes agregar cualquier inicialización adicional
   // Por ejemplo, cargar mensajes guardados del localStorage

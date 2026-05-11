@@ -184,6 +184,11 @@ function getInitials(name) { // Función para obtener las iniciales del nombre d
     return names[0].slice(0, 2).toUpperCase(); // Toma las primeras dos letras y las convierte a mayúsculas
   }
 
+  function showEmptyState(emptyStateElement) {
+    // Asegúrate de que 'hidden' sea la clase CSS que maneja el display: none
+    emptyStateElement.classList.remove('hidden');
+  }
+
   return names
     .map(word => word[0]) // Toma la primera letra de cada palabra
     .join("") // Une las letras obtenidas

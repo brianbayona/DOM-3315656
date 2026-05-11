@@ -177,6 +177,18 @@ function hideEmptyState(emptyStateElement) {
  * @param {string} userName - Nombre del usuario
  * @param {string} message - Contenido del mensaje
  */
+function getInitials(name) { // Función para obtener las iniciales del nombre del usuario
+  const names = name.trim().split(/\s+/);
+
+  if (names.length === 1) {
+    return names[0].slice(0, 2).toUpperCase();
+  }
+
+  return names
+    .map(word => word[0])
+    .join("")
+    .toUpperCase();
+}
 function createMessageElement(userName, message) {
 
   const newMessage = document.createElement("div");

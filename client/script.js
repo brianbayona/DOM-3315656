@@ -57,9 +57,11 @@ let totalMessages = 0;
  * @returns {boolean} - true si es válido, false si no lo es
  */
 function isValidInput(value) {
-    // TODO: Implementar validación
-    // Pista: usa trim() para eliminar espacios al inicio y final
-    // Retorna true si después de trim() el string tiene longitud > 0
+    // Elimina espacios al inicio y final
+    const trimmed = value.trim();
+
+    // Es válido si queda algo de texto
+    return trimmed.length > 0;
 }
 
 /**
@@ -68,8 +70,8 @@ function isValidInput(value) {
  * @param {string} message - Mensaje de error a mostrar
  */
 function showError(errorElement, message) {
-    // TODO: Implementar función para mostrar error
-    // Pista: asigna el mensaje al textContent del elemento
+    // Muestra el mensaje en pantalla
+    errorElement.textContent = message;
 }
 
 /**
@@ -77,9 +79,10 @@ function showError(errorElement, message) {
  * @param {HTMLElement} errorElement - Elemento del que limpiar el error
  */
 function clearError(errorElement) {
-    // TODO: Implementar función para limpiar error
-    // Pista: asigna un string vacío al textContent
+    errorElement.textContent = "";
 }
+
+
 
 /**
  * Valida todos los campos del formulario
